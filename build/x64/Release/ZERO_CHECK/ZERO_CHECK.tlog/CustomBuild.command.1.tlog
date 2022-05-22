@@ -1,0 +1,10 @@
+^C:\USERS\ALEX\SOURCE\REPOS\VECTORANDMATRIX\BUILD\CMAKEFILES\C9B25B45F4C9397E4FDA5D91B527D640\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Alex/source/repos/VectorAndMatrix -BC:/Users/Alex/source/repos/VectorAndMatrix/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Alex/source/repos/VectorAndMatrix/build/Test.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
