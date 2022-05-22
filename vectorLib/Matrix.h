@@ -68,13 +68,7 @@ inline TMatrix<Type>::~TMatrix()
 {
 	if (data != 0)
 	{
-
-		/*for (int q = 0; q < width; q++)
-		{
-			this->data[q].~TVector();
-			this->data[q] = 0;
-		}*/
-		
+		this->data = 0;
 		delete[] this->data;
 		this->data = 0;
 	}
@@ -170,7 +164,7 @@ inline TMatrix<Type>& TMatrix<Type>::operator=(const TMatrix<Type>& _matrix)
 template<class Type>
 inline TMatrix<Type> TMatrix<Type>::operator*(const TMatrix<Type>& _matrix)
 {
-	if (this -> length != _matrix.width) throw "size of matriÒes aren't correct";
+	if (this -> length != _matrix.width) throw "size of matri√±es aren't correct";
 	TMatrix<Type> result(_matrix.length, width, 0);
 	
 	
@@ -190,7 +184,7 @@ template<class Type>
  TMatrix<Type> TMatrix<Type>::operator*(const TVector<Type>& _vector)
 {
 	TVector<Type> temp(_vector);
-	if ((this->length) != temp.GetLength()) throw "size of matriÒes aren't correct";
+	if ((this->length) != temp.GetLength()) throw "size of matri√±es aren't correct";
 
 	TMatrix<Type> result(1, width, 0);
 	for (int i = 0; i < width; i++)
