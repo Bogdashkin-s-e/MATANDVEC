@@ -8,7 +8,6 @@ class TVector
 protected:
 	Type* data;
 	int length;
-
 public:
 	
 	TVector(int _length = 0);
@@ -26,7 +25,7 @@ public:
 	Type ScalarMult(const TVector<Type>& FirstVector, const TVector<Type>& SecondVector);
 	void ReSize(int NewLength = 1);
 	bool operator == (const TVector<Type>& _vector);
-	//допы задания
+	//Г¤Г®ГЇГ» Г§Г Г¤Г Г­ГЁГї
 	int ReturnCountSimilarValues(Type variable);
 	int* ReturnIJ(Type variable);
 	
